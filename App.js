@@ -31,6 +31,8 @@ import { H1 } from 'native-base';
 import Home from './screens/Home'
 import About from './screens/About'
 import Profile from './screens/Profile'
+import Movies from './screens/Movies';
+import List from './screens/List';
 
 const Stack = createStackNavigator()
 
@@ -47,10 +49,12 @@ class App extends React.Component {
       //   </View>
       // </SafeAreaView>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Home'>
+        <Stack.Navigator initialRouteName='List'>
           <Stack.Screen name="Home" component={Home}/>
           <Stack.Screen name="About" component={About}/>
           <Stack.Screen name="Profile" component={Profile}/>
+          <Stack.Screen name="Movies" component={Movies}/>
+          <Stack.Screen name="List" component={List}/>
         </Stack.Navigator>
       </NavigationContainer>
     )
