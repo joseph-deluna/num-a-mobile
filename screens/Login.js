@@ -3,6 +3,7 @@ import { Text, View, Container, Item, Input, Button } from 'native-base'
 import { Image, StyleSheet} from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
 import Icon from 'react-native-vector-icons/Entypo';
+import IconInput from '../components/IconInput'
 
 class Login extends React.Component{
     render(){
@@ -14,13 +15,14 @@ class Login extends React.Component{
                     </Image>
                 </View>
                 <View style={{marginTop: 20}}>
-                    <View style={{flexDirection: 'row'}}>
-                        <TextInput style={styles.input} placeholder='Username'>
-                        </TextInput>
-                        <Icon name="user" ></Icon>
-                    </View>
-                        <TextInput style={styles.input} placeholder='Password'>
-                        </TextInput>
+                    <IconInput
+                        placeholder = "Username"
+                        icon = {<Icon name='user'></Icon>}
+                    />
+                    <IconInput
+                        placeholder = "Password"
+                        icon = {<Icon name='lock'></Icon>}
+                    />
                 </View>
                 <View style={{marginTop: 40}}>
                     <Button rounded style={styles.btn}>
@@ -48,6 +50,7 @@ const styles = StyleSheet.create({
         padding: 10,
         margin: 10,
         backgroundColor: '#D9EF82',
+        paddingLeft: 40,
         
     },
     btn: {
